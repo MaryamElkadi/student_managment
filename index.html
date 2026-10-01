@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Student Registration List</title>
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-800">
+    <main class="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+        <header class="mb-8">
+            <p class="mb-2 text-sm font-semibold uppercase tracking-wider text-pink-700">Classroom tools</p>
+            <h1 class="text-3xl font-bold text-slate-900">Student Registration List</h1>
+            <p class="mt-2 text-slate-600">Add a student and keep their course details in one place.</p>
+        </header>
+
+        <section class="grid gap-8 md:grid-cols-[minmax(260px,0.8fr)_1.2fr]">
+            <form id="student-form" class="h-fit rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+                <h2 class="mb-5 text-xl font-semibold text-slate-900">Add a student</h2>
+
+                <div class="space-y-4">
+                    <div>
+                        <label for="student-name" class="mb-1 block text-sm font-medium">Student Name</label>
+                        <input id="student-name" name="studentName" type="text" class="w-full rounded-md border border-slate-300 px-3 py-2 outline-none focus:border-pink-600 focus:ring-2 focus:ring-pink-100">
+                    </div>
+                    <div>
+                        <label for="age" class="mb-1 block text-sm font-medium">Age</label>
+                        <input id="age" name="age" type="number" min="1" class="w-full rounded-md border border-slate-300 px-3 py-2 outline-none focus:border-pink-600 focus:ring-2 focus:ring-pink-100">
+                    </div>
+                    <div>
+                        <label for="course" class="mb-1 block text-sm font-medium">Course Name</label>
+                        <input id="course" name="course" type="text" class="w-full rounded-md border border-slate-300 px-3 py-2 outline-none focus:border-pink-600 focus:ring-2 focus:ring-pink-100">
+                    </div>
+                    <div>
+                        <label for="grade" class="mb-1 block text-sm font-medium">Grade</label>
+                        <input id="grade" name="grade" type="number" class="w-full rounded-md border border-slate-300 px-3 py-2 outline-none focus:border-pink-600 focus:ring-2 focus:ring-pink-100">
+                    </div>
+                </div>
+
+                <p id="error-message" class="mt-4 min-h-5 text-sm text-red-700" role="alert"></p>
+                <button type="submit" class="mt-2 w-full rounded-md bg-pink-700 px-4 py-2.5 font-semibold text-white hover:bg-pink-800 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2">Add Student</button>
+            </form>
+
+            <section aria-labelledby="students-heading">
+                <div class="mb-4 flex items-center justify-between">
+                    <h2 id="students-heading" class="text-xl font-semibold text-slate-900">Students</h2>
+                    <span id="student-count" class="rounded-full bg-white px-3 py-1 text-sm text-slate-600">0 students</span>
+                </div>
+                <div id="student-list" class="space-y-3">
+                    <p id="empty-message" class="rounded-lg border border-dashed border-slate-300 bg-white/70 p-6 text-center text-slate-500">No students added yet.</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="scrript.js"></script>
+</body>
+</html>
